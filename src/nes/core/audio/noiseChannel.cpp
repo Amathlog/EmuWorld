@@ -109,7 +109,6 @@ void NoiseChannel::ClockEnveloppe() { m_enveloppe.Clock(m_register.enveloppeLoop
 
 void NoiseChannel::Update(double cpuFrequency)
 {
-    float temp;
     if (m_lengthCounter > 0 && m_register.noisePeriod > 0)
     {
         m_currentOutput = (float)(m_enveloppe.output) / 15.0f;

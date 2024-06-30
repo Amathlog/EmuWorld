@@ -2,13 +2,13 @@
 #include <common/utils/visitor.h>
 #include <core/audio/circularBuffer.h>
 #include <core/audio/dmcChannel.h>
+#include <core/audio/filter_wrapper.h>
 #include <core/audio/noiseChannel.h>
 #include <core/audio/pulseChannel.h>
 #include <core/audio/triangleChannel.h>
 #include <core/constants.h>
 #include <core/serializable.h>
 #include <cstdint>
-#include <filter_includes.h>
 
 namespace NesEmulator
 {

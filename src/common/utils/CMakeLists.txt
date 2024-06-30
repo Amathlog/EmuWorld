@@ -8,6 +8,10 @@ file(GLOB_RECURSE COMMONUTILSLIB_SRC
 )
 
 add_library(CommonUtils_Lib OBJECT ${COMMONUTILSLIB_SRC})
+
+if (UNIX)
 SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -fPIC")
+endif(UNIX)
+
 target_link_libraries(CommonUtils_Lib)
 set_target_properties(CommonUtils_Lib PROPERTIES FOLDER ${MAIN_FOLDER})

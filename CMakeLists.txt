@@ -34,16 +34,19 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 endif(WIN32)
 
 # Include RTAudio
+add_subdirectory("${EmuWorld_SOURCE_DIR}/external/rtaudio" rtaudio)
+
 if(UNIX)
     set(RTAUDIO_API_PULSE ON)
     set(RTAUDIO_API_WASAPI OFF)
 endif(UNIX)
 if(WIN32)
-   set(RTAUDIO_API_WASAPI ON)
+   set(RTAUDIO_API_DS ON)
+   set(RTAUDIO_API_WASAPI OFF)
    set(RTAUDIO_API_PULSE OFF)
 endif(WIN32)
 set(RTAUDIO_BUILD_TESTING OFF)
-add_subdirectory("${EmuWorld_SOURCE_DIR}/external/rtaudio" rtaudio)
+
 include_directories("${EmuWorld_SOURCE_DIR}/external/rtaudio")
 set_target_properties(rtaudio PROPERTIES FOLDER ${EXTERNAL_FOLDER})
 if(WIN32)

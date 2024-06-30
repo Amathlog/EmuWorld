@@ -19,7 +19,7 @@
 namespace fs = std::filesystem;
 using namespace NesEmulatorGL;
 
-static bool enableAudioByDefault = false;
+static bool enableAudioByDefault = true;
 
 int main(int argc, char** argv)
 {

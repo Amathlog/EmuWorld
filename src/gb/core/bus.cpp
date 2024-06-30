@@ -337,7 +337,7 @@ bool Bus::Clock(bool* outInstDone)
     const unsigned numberOfPPUClocks = m_isDoubleSpeedMode ? 2 : 4;
 
     // Clock the PPU 4 times in single speed, 2 times in double speed.
-    for (auto i = 0; i < numberOfPPUClocks; ++i)
+    for (auto i = 0u; i < numberOfPPUClocks; ++i)
     {
         m_ppu.Clock();
         frameFinished |= m_ppu.IsFrameComplete();

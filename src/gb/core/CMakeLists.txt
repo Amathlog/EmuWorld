@@ -9,6 +9,10 @@ file(GLOB_RECURSE GBCORELIB_SRC
 )
 
 add_library(GBEmulator_Core OBJECT ${GBCORELIB_SRC})
+
+if (UNIX)
 SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -fPIC")
+endif(UNIX)
+
 target_link_libraries(GBEmulator_Core CommonUtils_Lib)
 set_target_properties(GBEmulator_Core PROPERTIES FOLDER ${MAIN_FOLDER})

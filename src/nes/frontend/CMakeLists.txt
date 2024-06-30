@@ -8,6 +8,10 @@ file(GLOB_RECURSE NES_FRONTEND_SRC
     "${GLAD_DIR}/src/glad.c"
 )
 
+if(WIN32)
+  add_definitions(/DWIN32_LEAN_AND_MEAN)
+endif(WIN32)
+
 add_executable(NesEmulator ${NES_FRONTEND_SRC})
 target_link_libraries(NesEmulator CommonUtils_Lib NesEmulator_Core ${OPENGL_LIBRARIES} glfw ${CMAKE_DL_LIBS} rtaudio ImGuiFE ImGui -static-libgcc -static-libstdc++)
 set_target_properties(NesEmulator PROPERTIES FOLDER ${MAIN_FOLDER})

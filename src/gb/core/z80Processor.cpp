@@ -100,7 +100,7 @@ bool Z80Processor::Clock()
 
     if (m_cycles == 0)
     {
-        if (__builtin_expect(m_dumpEnabled, 0))
+        if (m_dumpEnabled != 0) [[likely]]
         {
             std::cout << GBEmulator::Disassemble(*m_bus, m_PC, 1)[0] << std::endl;
         }

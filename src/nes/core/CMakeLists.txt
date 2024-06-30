@@ -10,6 +10,10 @@ file(GLOB_RECURSE CORELIB_SRC
 )
 
 add_library(NesEmulator_Core OBJECT ${CORELIB_SRC})
+
+if (UNIX)
 SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -fPIC")
+endif(UNIX)
+
 target_link_libraries(NesEmulator_Core CommonUtils_Lib)
 set_target_properties(NesEmulator_Core PROPERTIES FOLDER ${MAIN_FOLDER})

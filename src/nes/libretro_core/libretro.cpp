@@ -151,7 +151,7 @@ static void audio_callback()
     if (s_bus->GetAPU().FillSamplesIfReady(audio_buffer_float.data()))
     {
         std::transform(audio_buffer_float.begin(), audio_buffer_float.end(), audio_buffer_int16.begin(),
-                       [](float x) { return std::clamp(x, -1.0f, 1.0f) * static_cast<int16_t>(0x7fff); });
+                       [](float x) -> int16_t { return static_cast<int16_t>(std::clamp(x, -1.0f, 1.0f) * 0x7fff); });
 
         audio_batch_cb(audio_buffer_int16.data(), 64);
     }
