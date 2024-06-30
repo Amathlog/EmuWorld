@@ -1,0 +1,24 @@
+[submodule "external/glfw"]
+	path = external/glfw
+	url = https://github.com/glfw/glfw.git
+[submodule "external/imgui"]
+	path = external/imgui
+	url = https://github.com/ocornut/imgui.git
+[submodule "external/ImGui-Addons"]
+	path = external/ImGui-Addons
+	url = https://github.com/gallickgunner/ImGui-Addons.git
+[submodule "external/rtaudio"]
+	path = external/rtaudio
+	url = https://github.com/thestk/rtaudio.git
+[submodule "external/rgbds"]
+	path = external/rgbds
+	url = https://github.com/gbdev/rgbds.git
+[submodule "external/googletest"]
+	path = external/googletest
+	url = https://github.com/google/googletest.git
+[submodule "external/DSP-Cpp-filters"]
+	path = external/DSP-Cpp-filters
+	url = https://github.com/dimtass/DSP-Cpp-filters.git
+[submodule "external/libretro-common"]
+	path = external/libretro-common
+	url = https://github.com/libretro/libretro-common.git

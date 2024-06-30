@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "atomic": "cpp",
+        "*.tcc": "cpp",
+        "fstream": "cpp",
+        "sstream": "cpp",
+        "iosfwd": "cpp"
+    },
+
+    "editor.formatOnSave": true,
+    "dotnet.defaultSolution": "disable"
+}

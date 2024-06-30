@@ -30,3 +30,19 @@
 *.exe
 *.out
 *.app
+
+# Build stuff
+build/
+
+# Cache
+.cache/**
+
+# ROMS!
+roms/
+
+CMakeLists.txt.user
+tests/scripts/our_log.txt
+**/imgui.ini
+
+# Compiled roms for test
+tests/asm/*/**.gb
